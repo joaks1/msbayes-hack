@@ -1,10 +1,16 @@
 #!/usr/bin/perl -w
 
-# acceptRej.pl
+# acceptRej_flex.pl
 #
-# Copyright (C) 2006   Naoki Takebayashi and Michael Hickerson
+# Copyright (C) 2011 Jamie R. Oaks
 #
-# This program is distributed with msBayes.
+# This program is a modified version of the 'acceptRej.pl' script distributed 
+# with msbayes version v20100519, available at http://msbayes.sourceforge.net/
+#
+# citation:
+# Huang, W., N. Takebayashi, Y. Qi, and M. J. Hickerson, 2011. MTML-msBayes:
+#   Approximate Bayesian comparative phylogeographic inference from multiple
+#   taxa and multiple loci with rate heterogeneity. BMC Bioinformatics 12:1.
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License as

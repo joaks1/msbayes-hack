@@ -1,0 +1,68 @@
+INTRO
+=====
+
+This distribution contains modified versions of the 'acceptRej.pl' script
+distributed with msbayes version 20100519, available at:
+
+http://msbayes.sourceforge.net/
+
+These modifications are minimal, and so any publication resulting from the
+use of these scripts should cite the original work:
+
+ Huang, W., N. Takebayashi, Y. Qi, and M. J. Hickerson, 2011. MTML-msBayes:
+   Approximate Bayesian comparative phylogeographic inference from multiple
+   taxa and multiple loci with rate heterogeneity. BMC Bioinformatics 12:1.
+
+SUMMARY OF MODIFICATIONS
+========================
+
+An original, unmodified version of the program (acceptRej.pl.original) is
+provided as a reference. 
+
+The script 'acceptRej.pl' provided here simply modifies how the temporary
+files produced during execution are handled. My version places all the
+temporary files in folder within the current working directory. The intention
+of this change was to make the program more friendly to run on shared 
+computer clusters. Furthermore, the file containing the uncorrected posterior
+sample is never deleted in my version, and the user can specify a path for
+this file using the '-z' option (the default is './uncorrected_posterior.txt').
+
+The script 'acceptRej_flex.pl' has the same modifications discussed above,
+and in addition, allows the user to use summary statistics other than those
+produced by the msbayes package. The original version had very strict
+expectations for the number of summary statistic columns and their headers,
+and deduced the number of taxonomic comparisons being analyzed from this
+information. 'acceptRej_flex.pl' allows the user to use any number of
+summary statistics and use arbitrary header names. NOTE: as a result of
+this flexibility, the user MUST SPECIFY THE NUMBER OF TAXON PAIRS AT
+INVOCATION USING THE '-x' OPTION.
+
+USING THIS PROGRAM
+==================
+
+The PERL scripts provided here are useless on there own. They are modified
+versions of a script from the msbayes package (http://msbayes.sourceforge.net/)
+and are only useful in the context of this package. Currently, they are only
+verified to work with version 20100519 of the package.
+
+The easiest way to use these scripts is to first download, install, and test
+the msbayes package. Then, simply replace the installed 'acceptRej.pl' file
+with one of the versions provided here (I recommend changing the name of the
+original script so you can revert back to it at anytime). Then you can use
+the msbayes pipeline as normal, with the additional options discussed above
+available when you get to the accept/reject step.
+
+LEGAL STUFF
+===========
+
+This is free software you can redistribute and/or modify under the terms of 
+the GNU General Public License as published by the Free Software Foundation;
+either version 2 of the License, or any later version.
+
+This program is distributed WITHOUT ANY WARRANTY. See the GNU General Public
+License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+02110-1301, USA
