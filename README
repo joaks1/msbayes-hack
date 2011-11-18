@@ -35,7 +35,8 @@ and deduced the number of taxonomic comparisons being analyzed from this
 information. 'acceptRej_flex.pl' allows the user to use any number of
 summary statistics and use arbitrary header names. NOTE: as a result of
 this flexibility, the user MUST SPECIFY THE NUMBER OF TAXON PAIRS AT
-INVOCATION USING THE '-x' OPTION.
+INVOCATION USING THE '-x' OPTION. The 'acceptRej_flex.pl' must be used in
+conjunction with the 'acceptRej_flex.r' script to work correctly.
 
 USING THIS PROGRAM
 ==================
@@ -47,10 +48,16 @@ verified to work with version 20100519 of the package.
 
 The easiest way to use these scripts is to first download, install, and test
 the msbayes package. Then, simply replace the installed 'acceptRej.pl' file
-with one of the versions provided here (I recommend changing the name of the
+with the version provided here (I recommend changing the name of the
 original script so you can revert back to it at anytime). Then you can use
 the msbayes pipeline as normal, with the additional options discussed above
 available when you get to the accept/reject step.
+
+If you want to use non-msbayes summary statistics copy the acceptRej_flex.pl
+and acceptRej_flex.r into the same directories where their non-'flex'
+counterparts are installed. Then you can use the msbayes pipeline as normal,
+but call the 'acceptRej_flex.pl' script rather than 'acceptRej.pl' when
+you get to the rejection sampling step.
 
 LEGAL STUFF
 ===========
