@@ -2,7 +2,8 @@
 
 # acceptRej.pl
 #
-# Copyright (C) 2011 Jamie R. Oaks
+# Copyright (C) 2006   Naoki Takebayashi and Michael Hickerson (with modifications
+# by Jamie Oaks)
 #
 # This program is a modified version of the 'acceptRej.pl' script distributed 
 # with msbayes version v20100519, available at http://msbayes.sourceforge.net/
